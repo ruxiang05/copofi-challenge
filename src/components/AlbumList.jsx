@@ -60,7 +60,14 @@ class AlbumList extends Component {
     };
 
     if (error) return <div className="has-text-centered">Error: {error}</div>;
-    if (!isLoaded) return <div className="has-text-centered">Loading...</div>;
+    if (!isLoaded) return(
+      <div class="loading columns">
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+      </div>
+    )
     return (
       <div>
         <div className='columns is-centered'>
