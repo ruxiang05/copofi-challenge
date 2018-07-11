@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 
 class AlbumList extends Component {
   render() {
-    console.log(this.props);
     const {id, title, link: {attributes: {href}}, 'im:image': images} = this.props;
     const [song, artist] = title.label.split('-');
-    console.log(images);
+    
     return <li key={id} className="column is-6">
         <a href={href}>
           <div className="card">
@@ -15,7 +14,7 @@ class AlbumList extends Component {
                   <img src={images[2].label} alt={title} />
                 </figure>
               </div>
-              <div class="media-content">
+              <div className="media-content">
                 <h2 className="title is-5">{song}</h2>
                 <h3 className="subtitle is-6">{artist}</h3>
               </div>
