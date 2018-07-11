@@ -39,7 +39,7 @@ class AlbumList extends Component {
 
   getSuggestions(value) {
     return this.state.albums
-      .filter(album => album.title.label.toLowerCase().search(value) !== -1);
+      .filter(album => album.title.label.toLowerCase().search(value.toLowerCase()) !== -1);
   };
 
   onChange(e) {
