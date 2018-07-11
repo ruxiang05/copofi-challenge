@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import AlbumList from './components/AlbumList';
+import AlbumList from './AlbumList';
 
 class App extends Component {
   render() {
