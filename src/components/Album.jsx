@@ -19,7 +19,7 @@ class Album extends Component {
     const [song, artist] = title.label.split('-');
     return <li key={id} className="column is-6 album">
         <div className="card">
-          <a href={href}>
+         
             <div className="media is-marginless">
               <div className="media-left is-marginless">
                 <figure className="image is-128x128">
@@ -40,10 +40,17 @@ class Album extends Component {
                   </div>
                 </div>}
             </div>
-          </a>
-          <button className="button is-primary is-fullwidth is-radiusless" onClick={this.moreInfoClick}>
-            More info
-          </button>
+
+          <div className="columns is-marginless is-mobile">
+            <button className="button column is-6 is-primary is-radiusless is-paddingless" onClick={this.moreInfoClick}>
+              More info
+            </button>
+             <a href={href} className='column is-6 is-paddingless'> 
+              <button className="button is-primary is-radiusless is-paddingless is-marginless is-fullwidth">
+                Itunes 
+              </button>
+            </a>
+          </div>
         </div>
       </li>;
   }
